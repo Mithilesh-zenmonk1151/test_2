@@ -1,0 +1,15 @@
+.signup-logo{
+    width: 700px;
+    height: 530px;
+     margin-top: 40px;
+}
+.signup-btn{
+    background: #3c61f0 !important;
+    width: 460px !important;
+    height: 50px !important;
+    border-radius: 20px !important;
+}
+.type-signup{
+    color: aliceblue;
+    font-family: "Poppins";
+}

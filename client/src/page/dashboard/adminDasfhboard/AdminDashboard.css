@@ -1,0 +1,25 @@
+.save-btn{
+    background-color: #1091f9 !important;
+    border-radius: 10px !important;
+    width: 128px !important;
+    height: 48px !important;
+}
+.cancel-btn{
+    border: 2px solid #4f80e1 !important;
+    width: 128px !important;
+    height: 48px !important;
+    border-radius: 10px !important;
+
+
+}
+.setting-manage{
+    font-size: 32px !important;
+    font-weight: 900 !important;
+}
+.typo-save{
+    color: #ffffff;
+}
+.typo-cancel{
+    color: #4f80e1;
+
+}
