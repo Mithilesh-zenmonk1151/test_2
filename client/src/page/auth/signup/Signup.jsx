@@ -89,7 +89,7 @@ const Signup = () => {
                                     <TextFieldCompo
                                        label="Name"
                                        placeholder="enter your name"
-                                       Type="text"
+                                       type="text"
                                        customClasses=""
                                        value={name}
                                        name="name"
@@ -100,7 +100,7 @@ const Signup = () => {
                                     />
 
                                     <TextFieldCompo
-                                        Type="email"
+                                        type="email"
                                         label="email"
                                         placeholder="Email"
                                         name="email"
@@ -110,7 +110,7 @@ const Signup = () => {
                                     />
 
                                     <TextFieldCompo
-                                        Type="password"
+                                        type="password"
                                         placeholder="Password"
                                         name="password"
                                         value={password}
@@ -120,7 +120,7 @@ const Signup = () => {
                                     />
 
                                     <TextFieldCompo
-                                        Type="password"
+                                        type="password"
                                         placeholder="Confirm Password"
                                         name="confirmpassword"
                                         value={confirmPassword}

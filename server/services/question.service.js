@@ -4,12 +4,13 @@ const {resultModel}= require("../models")
 const CustomError = require("../utils/error");
 exports.addQuestions = async (payload) => {
   try {
-    const { testId } = payload.params;
-    const { userId } = payload.body;
-    const { name, correctOption, marks, option1, option2, option3, option4 } = payload.body;
+    // const { } = payload.params;
+    // const { } = payload.body;
+    const { name, correctOption, marks, option1, option2, option3, option4, testId , userId} = payload.body;
     // const { } = payload.body;
     // const op = [];
     // op.push(option1, option2, option3, option4);
+    console.log("Payload.body:-",payload.body)
     const question = await questionsModel.create({
       testId: testId,
       userId: userId,
@@ -23,17 +24,19 @@ exports.addQuestions = async (payload) => {
 
     //   options: op,
     });
-    const result = await resultModel.create({correctResponse:correctOption})
+    // const result = await resultModel.create({correctResponse:correctOption})
     console.log("questions", question);
-    return {question,result};
+    return question
   } catch (error) {
     throw error;
   }
 };
 exports.getQuestions = async (payload) => {
   try {
+
     const { testId } = payload.params;
-    const questions = await questionsModel.find({ testId }).sort();
+    console.log("userId",testId);
+    const questions = await questionsModel.find({testId});
     if (!testId) {
       CustomError("test is not found", 404);
     }

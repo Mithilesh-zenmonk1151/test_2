@@ -55,7 +55,7 @@ const Login = () => {
                         display:"flex",
                         bgcolor:"white",
                         width:"1250px",
-                        height:"600px",
+                        height:"700px",
                         borderRadius:"30px"
 
                     }}>

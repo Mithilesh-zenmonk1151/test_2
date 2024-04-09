@@ -17,8 +17,9 @@ export const questionTest = createAsyncThunk(
         option3: data.option3,
         option4: data.option4,
         marks: data.marks,
+        userId:data.userId,
 
-        testId: data.testId,
+        testId:data.testId,
       };
       console.log(body, "bodyertyt5y56y54y");
       const token = getState().auth.token;

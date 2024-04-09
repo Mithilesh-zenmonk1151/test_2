@@ -48,6 +48,7 @@ function AddTest() {
     try {
    
     dispatch(createTests({name,duration,instructions,totalNumberOfQuestions,totalMarks}));
+
     navigate("/add-quistions")
     
     } catch (error) {

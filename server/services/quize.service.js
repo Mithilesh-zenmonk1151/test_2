@@ -6,13 +6,17 @@ exports.createQuize = async (payload) => {
   const questionId=payload.params;
   const checkIsWrite= await questionsModel.find({questionId});
   const correctAnswer= checkIsWrite.correctOption;
-  const totalMarks=0;
+  var totalMarks=0;
   if(studentResponse===correctAnswer){
     const totalMarks= totalMarks+checkIsWrite.marks
 
 
     
   }
+  const quize= await resultModel.create({
+    
+
+  })
 
 };
 exports.getResult=async(payload)=>{

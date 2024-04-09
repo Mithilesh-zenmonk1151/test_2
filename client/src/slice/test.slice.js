@@ -77,6 +77,7 @@ export const testSlice = createSlice({
     });
     builder.addCase(getTests.fulfilled, (state, action) => {
       state.isLoading = false;
+      console.log("State content", state.content)
       state.content = action.payload;
     });
     builder.addCase(getTests.rejected, (state, action) => {

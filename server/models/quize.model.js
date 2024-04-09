@@ -2,7 +2,6 @@ const mongoose= require("mongoose");
 const resultSchema= new mongoose.Schema({
     studenId:{
         type:String,
-        required: true
     },
     studentResponse:{
         type:String

@@ -25,6 +25,7 @@ export default function TestCard({
   totalNumberOfQuestions,
   totalMarks,
   testId,
+  handleAddTestClick,
 }) {
   const dispatch = useDispatch();
 
@@ -34,12 +35,20 @@ export default function TestCard({
   const numberOfQuestions = questionArray?.length || 0;
   console.log("number of comment Array ", questionArray);
   const [seeQuestions, setSeeQuestions] = React.useState(false);
+  
 
   const handleTestClick = () => {
     setSeeQuestions(!seeQuestions);
     dispatch(getQuestions(testId));
   };
   console.log(questionArray);
+  const tests = useSelector((state) => state.test?.content?.response);
+
+  const handleOnAddTestClick=()=>{
+    console.log("Tessssst",tests)
+
+
+  }
 
   return (
     <Stack
@@ -89,7 +98,7 @@ export default function TestCard({
             {" "}
             Total Marks{totalMarks}
           </Typography>
-          <Buttons text="start test" customClasses="start-test" />
+          <Buttons text="ADD" customClasses="start-test" handleOnClick={handleAddTestClick} />
         
         </Stack>
 
