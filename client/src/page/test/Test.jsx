@@ -14,6 +14,7 @@ const Tests = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const [startId, setStartId] = useState("");
+  const [quizValue,setQuizValue]=useState("");
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getTests());
@@ -39,6 +40,10 @@ const Tests = () => {
   const quest = useSelector(
     (state) => state.question?.content?.res?.data?.response
   );
+  const handleOnRadioChange=(e)=>{
+    setQuizValue(e.target.value);
+  }
+console.log("QUIZEdf",quizValue)
 
   console.log("empty", tests);
   if (loading) {
@@ -109,6 +114,10 @@ const Tests = () => {
               option3={question.option3}
               option4={question.option4}
               marks={question.marks}
+              value={quizValue}
+              handleOnRadioChange={  handleOnRadioChange}
+
+
             />
           </Stack>
         );

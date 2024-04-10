@@ -16,13 +16,19 @@ export default function QuestionCard({
   option3,
   option4,
   marks,
+  value,
+  handleOnRadioChange
 }) {
+  
   return (
     <FormControl sx={{
       display:"flex",
       width:"100%",
-      justifyContent:"center"
-    }}>
+      justifyContent:"center",
+
+    }}
+    valu
+    >
       <Card sx={{ width: "100%", height: "30vh" ,justifyContent:"center"}}>
         <CardContent sx={{
           display:"flex",
@@ -35,6 +41,8 @@ export default function QuestionCard({
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="female"
             name="radio-buttons-group"
+            value={value}
+            onChange={handleOnRadioChange}
           >
            <Typography>Q.{name}</Typography>
            <FormLabel id="demo-radio-buttons-group-label">Choices</FormLabel>
